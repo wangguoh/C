@@ -1,0 +1,26 @@
+#include "stdio.h"
+int main()
+{	
+    char Str[100] = "it is not easy when you want make something change,but if it is easy that everyone can make it.";	
+    char word[6] = "it";//要统计的单词
+    int count = 0;//统计it出现次数
+    int count1 = 0;	
+    int i,j;	
+    int status = 0; 	
+    for (i = 0; i < 100; i++)	
+    {		
+     if (Str[i] == word[0])
+     {		    
+       j = 1;			
+       while (word[j] != '\0')	
+	{
+	 if (Str[i + j] == word[j])
+	  {		
+			j++;	
+			}	
+			else{	
+				goto here;
+				}
+			}		
+	//确保最后一个字母后没有其他字母
+			if (!((Str[i + 5] <= 90 && Str[i + 5] >= 65) ||	(Str[i + 5] >= 97 && Str[i + 5] <= 122)))			{				count++;			}		here:;		}	}	printf("it出现的次数 count = %d \n",count);	return 0;}
