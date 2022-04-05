@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+	char a[]="2+2*3+2/2-1";
+	int i,j,k,l,m;
+	i=a[0]-'0';
+	j=(a[2]-'0')*(a[4]-'0');
+	
+	k=(a[6]-'0')/(a[8]-'0');
+	
+	l=a[10]-'0';
+	m=i+j+k-l;
+	printf("最后的结果为:%d\n",m);
+
+	return 0;
+}
