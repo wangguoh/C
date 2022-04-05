@@ -1,0 +1,10 @@
+#include<stdio.h>int main ()
+{	
+   char a[]="3+4";
+   int x=a[0]-'0';
+   int y=a[2]-'0';
+   int sum;	
+   sum=x+y;	
+   printf("%d\n",sum);	
+   return 0;
+}
